@@ -24,9 +24,9 @@ jobs:
         run: |
           ssh ${{ secrets.USERNAME }}@${{ secrets.HOST }} << 'EOF'
 
-            git config --global --add safe.directory ${{ secrets.TARGET_DIR }}
+            git config --global --add safe.directory /var/www/node
             
-            cd ${{ secrets.TARGET_DIR }}
+            cd /var/www/node
 
             git fetch origin
 
